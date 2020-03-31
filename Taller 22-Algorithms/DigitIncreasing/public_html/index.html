@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            
+var org;
+(function (org) {
+    var jsweet;
+    (function (jsweet) {
+        /**
+         * This is a very simple example that just shows an alert.
+         * @class
+         */
+        /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+        var HelloWorld = (function () {
+            function HelloWorld() {
+            }
+            HelloWorld.main = function (args) {
+                
+                /**
+                 * a continuacion leemos en un prompt un numero y mostramos una alerta al ussuario de que si el 
+                 * numero es muy grande no podra ver el numero
+                 * @type type
+                 */
+                
+                var num =  prompt("Ingrese  un numero");
+               alert("Recuerde que no puede poner un numero exageradamente grande y el problema lo evaluara pero el resultado no saldra en pantalla");
+            
+                var num1=parseInt(num);
+                /**
+                 * segun la validacion de condiciones del enunciado el n debe ser de 1 a 9  y si solo pone un digito 
+                 * se imprime de nuevo lo ingresado  y finaliza
+                 */
+                if (num1 <= 9) {
+                   document.write("Respuesta:1");
+                    document.write("\n");
+                    document.write("secuencia=" + num1);
+                }
+                else {
+                    /**
+                     * A continuacion por medio e un ciclo for valida todos los resultados de los posibles n en las secuecias 
+                     * dependiendo el n ingresado o el numero , para esto tenemso 9 variables de las secuencias
+                     * y asi poder comparar mas adelante con la variable ingresada
+                     * 
+                     * usamos el pareseInt para pasar el n a numero
+                     * @type Number
+                     */
+                    for (var i = 1; i <= 9; i++) {
+                        {
+                            var n = new String(i).toString();
+                            var sec1 = parseInt(n);
+                            var sec2 = parseInt(n) + parseInt(n + n);
+                            var sec3 = parseInt(n) + parseInt(n + n) + parseInt(n + n + n);
+                            var sec4 = parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n);
+                            var sec5 = parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n);
+                            var sec6 = parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n) + parseInt(n + n + n + n + n + n);
+                            var sec7 = parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n) + parseInt(n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n);
+                            var sec8 = parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n) + parseInt(n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n + n);
+                            var sec9 = parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n) + parseInt(n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n + n + n);
+                            /**
+                             * a continuacion validamos e imprimimos la secuecnais y el resultado correcto comparando lo del ciclo anterior con 
+                             * el n ingresado si es positivo imprime 1 si no es positivo el resultado obtenido pone 0.
+                             */
+                            if (num1 === sec1) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                 document.write("secuencia= " + n + " = " + num1);
+                            }
+                            if (num1 === sec2) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                 document.write("secuencia= " +n + " + " + n + n + " = " + (parseInt(n) + parseInt(n + n)));
+                            }
+                            if (num1 === sec3) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                 document.write("secuencia =" +n + " + " + n + n + "+" + n + n + n + " = " + (parseInt(n) + parseInt(n + n) + parseInt(n + n + n)));
+                            }
+                            if (num1 === sec4) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                 document.write("secuencia =" +n + " + " + n + n + "+" + n + n + n + "+" + n + n + n + n + " = " + (parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n)));
+                            }
+                            if (num1 === sec5) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                 document.write("secuencia =" +n + " + " + n + n + "+" + n + n + n + "+" + n + n + n + n + "+" + n + n + n + n + n + " = " + (parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n)));
+                            }
+                            if (num1 === sec6) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                 document.write("secuencia =" +n + " + " + n + n + "+" + n + n + n + "+" + n + n + n + n + "+" + n + n + n + n + n + "+" + n + n + n + n + n + n + " = " + (parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n) + parseInt(n + n + n + n + n)));
+                            }
+                            if (num1 === sec7) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                 document.write("secuencia =" +n + " + " + n + n + "+" + n + n + n + "+" + n + n + n + n + "+" + n + n + n + n + n + "+" + n + n + n + n + n + n + "+" + n + n + n + n + n + n + n + " = " + (parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n) + parseInt(n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n)));
+                            }
+                            if (num1 === sec8) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                document.write("secuencia =" +n + " + " + n + n + "+" + n + n + n + "+" + n + n + n + n + "+" + n + n + n + n + n + "+" + n + n + n + n + n + n + "+" + n + n + n + n + n + n + n + "+" + n + n + n + n + n + n + n + n + " = " + (parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n) + parseInt(n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n + n)));
+                            }
+                            if (num1 === sec9) {
+                                document.write("Respuesta:1");
+                                document.write("\n");
+                                document.write("secuencia =" + n + " + " + n + n + "+" + n + n + n + "+" + n + n + n + n + "+" + n + n + n + n + n + "+" + n + n + n + n + n + n + "+" + n + n + n + n + n + n + n + "+" + n + n + n + n + n + n + n + n + "+" + n + n + n + n + n + n + n + n + n + " = " + (parseInt(n) + parseInt(n + n) + parseInt(n + n + n) + parseInt(n + n + n + n) + parseInt(n + n + n + n + n) + parseInt(n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n + n) + parseInt(n + n + n + n + n + n + n + n + n)));
+                            }
+                        }
+                        ;
+                    }
+                }
+            };
+            return HelloWorld;
+        }());
+        jsweet.HelloWorld = HelloWorld;
+        HelloWorld["__class"] = "org.jsweet.HelloWorld";
+    })(jsweet = org.jsweet || (org.jsweet = {}));
+})(org || (org = {}));
+org.jsweet.HelloWorld.main(null);
+
+            </script>
+    </body>
+</html>
