@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+            /**
+            * Este script calcula y llena un arreglo dependiendo si la psicion es apr o no 
+            * eso se determina por medio de que si la posicion mod 2 es igual a 0 es par .
+            * si es par se llena esa posicion con (i * i) + 1 si no con 3 * (i + 1). 
+            *
+            * @author: Julian Alberto Peñuela Buitrago ID:607452
+            * @version: 25/03/2020
+            */
+           
+           
+           /**
+            * a continuacion creamos dos arreglos de la mitad del tamaño del original 
+            * para poder almacenar en uno los pares y en otro impares
+            * @type type
+            */
+                var n = prompt("ingrese cuantas posiciones desea:");
+                document.write("numero de posiciones=" + n + "<br/>");
+                var numeros = new Array(n);
+                var num = new Array(n);
+                var par = new Array(n / 2);
+                var impar = new Array(n / 2);
+                var sumatoria = 0;
+                var productoria = 1;
+                
+                /**
+                 * a continuacion llenamos el arreglo principal segun lo pedido por el 
+                 * enunciado del problema.
+                 * @type Number
+                 */
+                for (var i = 0; i < n; i++) {
+
+                    if (i % 2 === 0) {
+                        numeros[i] = (i * i) + 1;
+
+
+                    } else {
+                        numeros[i] = 3 * (i + 1);
+
+                    }
+
+                }
+                
+                /**
+                 * a continuacion llenamos los arreglos cada uno con la mitad del arreglo que le corresponde 
+                 * en ambos casos tenemos  una variable que aumenta y esta sirve para poder llevar las posiciones correctas 
+                 * de los arreglos  de pares e impares sin tener en cuenta el recorrido del vector original
+              
+                 * @type Number
+                 */
+                var y = 0;
+                for (var i = 0; i < n; i = i + 2) {
+
+                    impar[y] = numeros[i];
+                    y = y + 1;
+
+                }
+                var x = 0;
+
+                for (var i = 1; i < n; i = i + 2) {
+
+                    par[x] = numeros[i];
+                    x = x + 1;
+                }
+               
+
+
+
+
+
+                /*
+                 * imprimimosel array con un ciclo for.
+                 */
+                for (var i = 0; i < n; i++) {
+
+                    document.write("vec[" + i + "]=" + numeros[i] + "<br/>");
+
+                }
+                document.write("--------------------------------" + "<br/>");
+                /*
+                 * imprimimosel array con un ciclo for.
+                 * 
+                 * imprimos al revez el arreglo de los pares y al derecho de los impares y se concatenan.
+                 */
+                var con=0;
+                for (var i = (n / 2) - 1; i >= 0; i--) {
+                   
+                    document.write("vec[" + con + "]=" + par[i] + "<br/>");
+                  con=con+1;
+                }
+               
+                for (var i = 0; i < n / 2; i++) {
+                    document.write("vec[" + con + "]=" + impar[i] + "<br/>");
+                    num[i]=par[i];
+                    con=con+1;
+                }
+                 document.write("--------------------------------" + "<br/>");
+               
+               
+               
+                
+
+
+
+        </script>
+    </body>
+</html>

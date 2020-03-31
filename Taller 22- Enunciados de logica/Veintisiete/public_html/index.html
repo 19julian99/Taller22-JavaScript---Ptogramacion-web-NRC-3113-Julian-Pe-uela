@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+            /**
+            * Este script reconoce si una palabra es palindroma esto 
+            * pensando en la logica de java fue llevado a la logica de java script
+            * primero pedimos que el usuario  ingrese una palabra , aqui no hay que difinir el tipo de variable 
+            * que necesitamos y creamos dos auxiliares un contador para validar si es palindroma y otro para saber si no 
+            *
+            * @author: Julian Alberto Peñuela Buitrago ID:607452
+            * @version: 25/03/2020
+            */
+           
+            var pe =prompt("ingrese una palabra:");
+            document.write("lo que ingreso fue:"+pe+"<br/>")
+            pe=pe.replace(/ /g, "");
+            
+            var con = 0;
+            var alre = "";
+            /**
+             * hacemos uso del contador legth para saber el tamaño de la palabra y con esto hacer las validaciones
+             * usamos el chartat para partir en caracteres la palabra y esto pasar la la cadena de alreves en este
+             * caso, posteririrmente dentro del ciclo se valida si alre y palabra son  iguae¿les retornando si es palindroma y 
+             * dejando el contador quieto de lo contrario si el contador se mueve no es palibroma y esto se tiene en cuenta mas 
+             * abajo y si es mayor a 0 la palabra no es un palindromo.
+             * 
+             * @type Number
+             */
+            for (var x = pe.length - 1; x >= 0; x--) {
+                
+                    alre = alre+ pe.charAt(x);
+                    if ((function (o1, o2) { if (o1 && o1.equals) {
+                        return o1.equals(o2);
+                    }
+                    else {
+                        return o1 === o2;
+                    } })(pe, alre)) {
+                        document.write("Si es palindromo");
+                        con = con + 1;
+                    }
+                
+            }
+            if (con === 0) {
+               document.write("No es palindromo");
+            }
+        
+        </script>
+    </body>
+</html>

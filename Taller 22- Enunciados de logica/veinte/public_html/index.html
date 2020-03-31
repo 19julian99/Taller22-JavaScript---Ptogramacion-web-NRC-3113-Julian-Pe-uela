@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+              /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+           
+           /**
+            * se lee un numero a validar .
+            * @type type
+            */
+           var numero=prompt("ingrese el numero a de numero que quiere")
+         
+        var contador = 0;
+        var canti=0;
+        var sumatoria=0;
+        var promedio=0;
+        
+       /**
+        * en un ciclo for se inicia el contador  y se validan si los numeros y si j%i==0 se suma un contador
+        * y dependiendo de esto al fnal se imprime la j y la umatoria de ellos y el contador esto 
+        * haciendo referencia a los umeros primos y no primos
+        * @type Number
+        */
+        for (var j = 1; j <=(numero*2); j++) {
+    
+
+                for (var i = 0; i <= (j+1); i++) {
+                    
+                        if ((j % i) === 0) {
+                            contador=contador+1;
+                        }
+                    
+                   
+                }
+                 if (contador <= 2) {
+                    document.write("["+j+" ]");
+                    sumatoria=sumatoria+j;
+                    canti=canti+1;
+                  
+                }
+                
+            contador = 0;
+    }
+   
+    promedio=sumatoria/canti;
+    document.write("<br/>"+"sumatoria total:"+sumatoria+"<br/>");
+    document.write("promedio total "+promedio+"<br/>");
+                
+  
+     
+
+        </script>
+    </body>
+</html>

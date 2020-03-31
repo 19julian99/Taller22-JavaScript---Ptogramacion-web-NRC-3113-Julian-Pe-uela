@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+             /**
+            * Este script imprime los meses de un año 
+            * para ello tenemos una variable , que lee el año solicitado y mediante un ciclo for se imprimen los 30 dias de un mes y asi
+            * al fuinal imprimimos los 12 años , estos tienen un conidiconal adentro  que cambia de 1 a 12 para determinar en qu emes estamos e imprimir 
+            * los 12 meses correspondientes.
+            *
+            * @author: Julian Alberto Peñuela Buitrago ID:607452
+            * @version: 25/03/2020
+            */
+            var ilusion=prompt("ingrese un año");
+                for (var j = 0; j < 12; j++) {
+                
+                    if (j === 0) {
+                       document.write("-------------------Enero-------------------"+"<br/>");
+                    }
+                    if (j === 1) {
+                       document.write("<br/>"+"-------------------Febrero-------------------"+"<br/>");
+                    }
+                    if (j === 2) {
+                        document.write("<br/>"+"-------------------Marzo-------------------"+"<br/>");
+                    }
+                    if (j === 3) {
+                        document.write("<br/>"+"-------------------Abril-------------------"+"<br/>");
+                    }
+                    if (j === 4) {
+                        document.write("<br/>"+"-------------------Mayo-------------------"+"<br/>");
+                    }
+                    if (j === 5) {
+                        document.write("<br/>"+"-------------------Junio-------------------"+"<br/>");
+                    }
+                    if (j === 6) {
+                        document.write("<br/>"+"-------------------Julio-------------------"+"<br/>");
+                    }
+                    if (j === 7) {
+                        document.write("<br/>"+"-------------------Agosto-------------------"+"<br/>");
+                    }
+                    if (j === 8) {
+                        document.write("<br/>"+"-------------------Septiembre-------------------"+"<br/>");
+                    }
+                    if (j === 9) {
+                        document.write("<br/>"+"-------------------Octubre-------------------"+"<br/>");
+                    }
+                    if (j === 10) {
+                        document.write("<br/>"+"-------------------Noviembre-------------------"+"<br/>");
+                    }
+                    if (j === 11) {
+                        document.write("<br/>"+"-------------------Diciembre-------------------"+"<br/>");
+                    }
+                    document.write("[L]+[M]+[M]+[J]+[V]+[S]+[D]"+"<br/>");
+                    for (var i = 1; i <= 30; i++) 
+                        {
+                            if (i === 8 || i === 15 || i === 22 || i === 29) {
+                                document.write("<br/>")
+                            }
+                            document.write("[" + i + "]");
+                        }
+                    }
+                        
+                    
+                    console.info("");
+        </script>
+    </body>
+</html>

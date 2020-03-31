@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+            /**
+            * Este script calcula y llena un arreglo con un ciclo for asiganddole a las psiciones (i+1)*i
+            * esto se hace N veces en el ciclo dpeendiendo el numero ingresado y imultanemanete se realiza 
+            * la sumatoria con una variable contador.
+            *
+            * @author: Julian Alberto Peñuela Buitrago ID:607452
+            * @version: 25/03/2020
+            */
+              var n=prompt("ingrese cuantas posiciones desea:");
+            document.write("numero de posiciones=" + n+"<br/>");
+            var numeros = new Array(n);
+            var promedio=0;
+            var sumatoria=0;
+            for (var i = 0; i < n; i++) {
+                
+                    numeros[i]=(i+1)*i;
+                sumatoria=sumatoria+numeros[i];//se aumenta el contador sumatoria por el mismo y el numero nuevo del array
+            }
+            /**
+             * se imprime el arreglo por medio de un ciclo for dsde 0 hasta N que N es lo ingresado por el usuario.
+             */
+            for (var i = 0; i < n; i++) {
+                
+                   document.write("vec["+i+"]="+numeros[i]+"<br/>");
+                
+                
+            }
+            promedio=sumatoria/n;//para el promedio se divide la sumatoria entre el numero que ingresa el usuario
+           /**
+            * se imprimen las variables
+            */
+           document.write("sumatoria=" + sumatoria+"<br/>");
+           document.write("promedio=" + promedio);
+        </script>
+    </body>
+</html>

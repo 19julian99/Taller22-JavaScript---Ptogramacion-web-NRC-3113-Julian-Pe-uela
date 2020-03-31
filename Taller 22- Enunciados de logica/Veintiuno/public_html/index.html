@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+          var prueb;
+(function (prueb) {
+    /**
+              * 
+             * @fileoverview 
+             * @author Julian peñuela id:607452
+             * @version 0.1
+             * fecha:26/03/2020
+             * 
+             * a continuacion evaluaremos  el numero eules , nos damos cuenta  que es muy parecida a la serie de taylor
+             * que hicimos en un punto anterior por eso vamos a reutilizar el codigo de ella pero la modificaremos.
+             * 
+             * 
+             * a continuacion definimos y leemos la variable numero y con est r¿se realiza rl calculo
+             *
+             */
+    var Prueb = (function () {
+        function Prueb() {
+        }
+        /**
+         * @param {Array} args the command line arguments
+         */
+        Prueb.main = function (args) {
+            var precision =prompt("cuentos numeros de presicion desea:");
+            precision = precision + 10;//esta es la parte que se modifica ya que a los
+            // 10 terminos de precision mas 10 sale el numero  eules
+            /**
+             * de resto a continuacion tenemos variables de proceso como lo son x suma y demas
+             * @type Number
+             */
+            var estatico = 1;
+            var suma = 0;
+            var termino;
+            
+            /**
+             * a continuacion tenemos un ciclo for donde encontraremos un ciclo for que 
+             * dentro de ella usamos la libreria math.pow para evaluar la potenica de un numero 
+             * y se llama al factorial.
+             * @type Number
+             */
+            for (var i = 0; i < precision; i++) {
+                {
+                    termino = Math.pow(estatico, i) / Prueb.factorial(i);
+                    suma += termino;
+                }
+                ;
+            }
+          document.write("Euler="+suma);
+        };
+        /**
+         * a continuacion tenemos el factorial , donde se calcula el factorial de un numero , esto se logra 
+         * con una variable que nos sirva para contener la suma de multiplicaciones de ella misma por la variable
+         * que cambia durante el ciclo
+         * @param {type} numero
+         * @returns {Number}
+         */
+        Prueb.factorial = function (numero) {
+            var factorial = 1;
+            for (var i = 2; i <= numero; i++) {
+                {
+                    factorial *= i;
+                }
+                ;
+            }
+            return factorial;
+        };
+        return Prueb;
+    }());
+    prueb.Prueb = Prueb;
+    Prueb["__class"] = "prueb.Prueb";
+})(prueb || (prueb = {}));
+prueb.Prueb.main(null);
+      </script>
+    </body>
+</html>
