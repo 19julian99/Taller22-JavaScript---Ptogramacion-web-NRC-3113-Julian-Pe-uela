@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+              /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+
+var serieMod;
+(function (serieMod_1) {
+    /**
+     *
+     * @author julian
+     * @class
+     */
+    var serieMod = (function () {
+        function serieMod() {
+        }
+        /**
+         * @param {Array} args the command line arguments
+         */
+        serieMod.main = function (args) {
+            /**
+             * leemos por un prompt la variable x  y la cnatidad de terminos
+             * @type type
+             */
+            var Terminos=prompt("ingrese terminos")
+            
+            var x = prompt("ingrese x")
+            var suma = 0;
+            var t = 0;
+            var sig = 1;
+            /**
+             * por medio de un ciclo for calculamos la potencia y se llama el factorial 
+             * de abajo con parametro i para calcular el numero 
+             * @type Number
+             */
+            for (var i = 0; i < Terminos; i++) {
+                {
+                    t = Math.pow(x, i) / serieMod.factorial(i) * sig;
+                    sig = sig * -1;
+                    suma = suma + t;
+                }
+                ;
+            }
+           documet.write("resultado="+suma);
+        };
+        /**
+         * 
+         * @param {type} numero
+         * @returns {Number}a continuacion tenemos la logica del factorial de que s e
+         * multiplica por si mismo hasta lleagr a 0 o a su limite desde 0
+         */
+        serieMod.factorial = function (numero) {
+            var factorial = 1;
+            for (var i = 2; i <= numero; i++) {
+                {
+                    factorial *= i;
+                }
+                ;
+            }
+            return factorial;
+        };
+        return serieMod;
+    }());
+    serieMod_1.serieMod = serieMod;
+    serieMod["__class"] = "serieMod.serieMod";
+})(serieMod || (serieMod = {}));
+serieMod.serieMod.main(null);
+        </script>
+    </body>
+</html>
