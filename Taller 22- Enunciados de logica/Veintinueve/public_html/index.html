@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+            /**
+             * Este script calcula y llena un arreglo dependiendo si la psicion es apr o no 
+             * eso se determina por medio de que si la posicion mod 2 es igual a 0 es par .
+             * si es par se llena esa posicion con i+7 si no con i-1. ya como estamos definiendo de una vez si es par no 
+             * entonces vamos a tener dos contadores uno que es la sumatoria de pares y otro que es la productoria de impares.
+             * por ultimo con un ciclo for imprimimos el vextor recorriendo cada posicion y listo.
+             *
+             * @author: Julian Alberto Peñuela Buitrago ID:607452
+             * @version: 25/03/2020
+             */
+            var base = prompt("ingrese el puente");
+            var tamaño = base.length;
+            var ba = base.charAt(0);
+            var fi = base.charAt(tamaño);
+            var cont = 0;
+
+            var letras = new Array(tamaño);
+
+            /**
+             * a continuacion verificamos si la base es correcta y se pone en el arreglo
+             */
+            if (ba == "*" || fi == "*") {
+                document.write("La base esta bien" + "<br/>");
+                for (var i = 0; i < tamaño; i++) {
+
+                    letras[i] = base.charAt(i);
+
+                }
+
+
+                /**
+                 * aqui verificamos si el caracter actual y el siguiente son iguales para verificar si siuen dos piezas
+                 * prohibidas iguales
+                 */
+                for (var i = 0; i < tamaño; i++) {
+
+                    if ((letras[i] == ("+") && letras[i + 1] == ("+"))) {
+                        cont = cont + 1;
+                    }
+                    if ((letras[i] == ("=") && letras[i + 1] == ("=") && letras[i + 1] == ("="))) {
+                        cont = cont + 1;
+                    }
+
+
+
+                }
+
+                /**
+                 * finalmente si valida que tiene dos piesas prohibidas seguidas el sube un contador y por consiguiente
+                 * si el contador es mayor a 1 el impeime qu esta mal construido.
+                 */
+                if (cont > 0) {
+                    document.write("<br/>" + "Puente esta mal construido");
+                } else {
+                    document.write("el puente es valido");
+                }
+
+            } else {
+                document.write("<br/>" + "invalido" + "<br/>");
+            }
+
+
+
+        </script>
+    </body>
+</html>

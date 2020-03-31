@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+            var prueb;
+(function (prueb) {
+    /**
+     *
+     * @author julian
+     * @class
+     */
+    var Prueb = (function () {
+        function Prueb() {
+        }
+        /**
+         * @param {Array} args the command line arguments
+         */
+        Prueb.main = function (args) {
+             /**
+            * A continuacion leemo el temaño de la matriz que sera de nxn
+            * definimos el numero mayor y el menor esto para su cometido obiamente y tambien una variable
+            * contenedor para la sumatoria.
+            *
+            * @author: Julian Alberto Peñuela Buitrago ID:607452
+            * @version: 25/03/2020
+            */
+            var n
+            var n1=prompt("ingrese n")
+            var mayor=0;
+            var menor=99999999;
+            var cont=0;
+            /**
+             * 
+             * @type Number|
+             * Arraydefinimos una variable llamada matris en la cual usamos y llamamos varias funciones para definir el areglo
+             * abajo tenemos el arra definido en una dimencion y con el ciclo y el objeto dims ayudamos a crear el arreglo 
+             * tambien posteriormente a el ponemos la bariable n1 para el tamaño
+             * 
+             */
+            var matriz = (function (dims) { var allocate = function (dims) { if (dims.length == 0) {
+                return 0;
+            }
+            else {
+                var array = [];
+                for (var i = 0; i < dims[0]; i++) {
+                    array.push(allocate(dims.slice(1)));
+                }
+                return array;
+            } }; return allocate(dims); })([n1, n1]);//aqui ponemos el valor del N para el tamaño
+    /**
+     * tenemos contador abajo en 0 y definimos dos for para recorrer el arreglo
+     * en ella llenamos el arreglo con matriz[i][j] = (i + 1) - j; y de una ves vamos
+     * verficando el mayor y el menor , para el mayor lo iniciamos en 0 y si matriz[i][j] 
+     * es mayor a 0 se le asigna y asi sucesivamente lo mismo pera el menor pero esta se inicia en 99999
+     */
+            var cont = 0;
+            for (var i = 0; i < n1; i++) {
+                {
+                    for (var j = 0; j < n1; j++) {
+                        {
+                            matriz[i][j] = (i + 1) - j;
+                            cont=cont+matriz[i][j];
+                             if (matriz[i][j]>mayor) {
+                                mayor=matriz[i][j];
+                            }
+                            if (menor>matriz[i][j]) {
+                                menor=matriz[i][j];
+                            }
+                        }
+                        ;
+                    }
+                }
+                ;
+                
+            }
+            /**
+             * a continuaciontenemos dos for para recorrer e imprimir la matriz
+             */
+            for (var i = 0; i < n1; i++) {
+                {
+                    for (var j = 0; j < n1; j++) {
+                        {
+                            document.write(matriz[i][j]);
+                        }
+                        ;
+                    }
+                     document.write("<br/>");
+                }
+                ;
+            }
+            /**
+             * a continuacion imprimimos el contador el mayor y el menor .
+             */
+            document.write("<br/>"+"la sumatoria es : "+cont+"<br/>");
+            document.write("el numero mayor es : "+mayor+"<br/>");
+            document.write("el numero menor es : "+menor+"<br/>");
+        };
+        return Prueb;
+    }());
+    prueb.Prueb = Prueb;
+    Prueb["__class"] = "prueb.Prueb";
+})(prueb || (prueb = {}));
+prueb.Prueb.main(null);
+
+        </script>
+    </body>
+</html>

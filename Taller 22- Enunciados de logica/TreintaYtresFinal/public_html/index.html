@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <script>
+            var prueb;
+(function (prueb) {
+    /**
+     *
+     * @author julian
+     * @class
+     */
+    var Prueb = (function () {
+        function Prueb() {
+        }
+        /**
+         * @param {Array} args the command line arguments
+         */
+        Prueb.main = function (args) {
+             /**
+            * A continuacion leemo el temaño de la matriz que sera de nxn
+            * 
+            *
+            * @author: Julian Alberto Peñuela Buitrago ID:607452
+            * @version: 25/03/2020
+            */
+            var m=prompt("ingrese m")
+            var n=prompt("ingrese n");
+            var p=prompt("ingrese p")
+            
+            /**
+             * 
+             * @type Number|
+             * Arraydefinimos una variable llamada matris en la cual usamos y llamamos varias funciones para definir el areglo
+             * abajo tenemos el arra definido en una dimencion y con el ciclo y el objeto dims ayudamos a crear el arreglo 
+             * tambien posteriormente a el ponemos la bariable n1 para el tamaño
+             * 
+             */
+            var matriz = (function (dims) { var allocate = function (dims) { if (dims.length == 0) {
+                return 0;
+            }
+            else {
+                var array = [];
+                for (var i = 0; i < dims[0]; i++) {
+                    array.push(allocate(dims.slice(1)));
+                }
+                return array;
+            } }; return allocate(dims); })([n1, n1]);//aqui ponemos el valor del N para el tamaño
+    /**
+     * tenemos contador abajo en 0 y definimos dos for para recorrer el arreglo
+     * en ella llenamos el arreglo con matriz[i][j] = (i - j); 
+     */
+            var cont = 0;
+            for (var i = 0; i < n1; i++) {
+                {
+                    for (var j = 0; j < n1; j++) {
+                        {
+                            matriz[i][j] = i+j;
+                            
+                             
+                        }
+                        ;
+                    }
+                }
+                ;
+                
+            }
+            /**
+             * a continuaciontenemos dos for para recorrer e imprimir la matriz
+             */
+            document.write("<br/>"+"-------------normal-----------"+"<br/>");
+            for (var i = 0; i < n1; i++) {
+                {
+                    for (var j = 0; j < n1; j++) {
+                        {
+                             document.write("["+matriz[i][j]+"]");
+                        }
+                        ;
+                    }
+                     document.write("<br/>");
+                }
+                ;
+            }
+            /**
+             * para imprimir la inferior solamente vamos a cambiar el atributo del limite en el segundo for 
+             * por la variable del primer ciclo y asi nos imprimira la motad del array.
+             */
+            document.write("<br/>"+"-------------triangular inferior-----------"+"<br/>");
+            for (var i = 0; i < n1; i++) {
+                {
+                    for (var j = 0; j < i; j++) {
+                        {
+                            document.write("["+matriz[i][j]+"]");
+                        }
+                        ;
+                    }
+                     document.write("<br/>");
+                }
+                ;
+            }
+           
+            
+            
+        };
+        return Prueb;
+    }());
+    prueb.Prueb = Prueb;
+    Prueb["__class"] = "prueb.Prueb";
+})(prueb || (prueb = {}));
+prueb.Prueb.main(null);
+
+        </script>
+    </body>
+</html>

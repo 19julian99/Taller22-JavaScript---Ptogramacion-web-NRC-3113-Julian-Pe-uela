@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /**
+            * LINK DEL GITHUB:
+            *https://github.com/19julian99/Taller22-JavaScript---Ptogramacion-web-NRC-3113-Julian-Pe-uela.git
+            * @type type
+            *
+            */
+             /**
+            * Este script verifica si una base es valida la viga ingresada ,
+            * si esa viga tiene una base erronea no lo valida y dice que esta mal de lo 
+            * contrario si se valida el resto de la estructura, para eso con un charAt vamos a validar
+            * si la base es correcta y aprobechando el char at vamos a meterlos en un arreglo y sacaremos el tamaño de el
+            *
+            * @author: Julian Alberto Peñuela Buitrago ID:607452
+            * @version: 25/03/2020
+            */
+        var base=prompt("ingrese la viga");
+        var tamaño=base.length;
+        var ba=base.charAt(0);
+        var cont=0;
+        var letras = new Array(tamaño);
+        var lar=0;
+        var con=0;
+        
+        /**
+         * a continuacion verificamos si la base es correcta y se pone en el arreglo
+         */
+        if (ba=="#"||ba=="%"||ba=="&") {
+            document.write("La base esta bien"+"<br/>") ;
+             for (var i = 0; i < tamaño; i++) {
+         
+        letras[i]=base.charAt(i);
+                    if (letras[i] == "=") {
+                        lar = lar + 1;
+                    }
+                    if (letras[i] == "") {
+                        con = con + 1;
+                    }
+                }
+
+
+/**
+ * aqui verificamos si el caracter actual y el siguiente son iguales para verificar si siuen dos piezas
+ * prohibidas iguales
+ */
+                for (var i = 0; i < tamaño; i++) {
+
+                    if ((letras[i] == ("*") && letras[i + 1] == ("*"))) {
+                        cont = cont + 1;
+                    }
+
+                    if ((letras[i] == ("&") && letras[i + 1] == ("&"))) {
+                        cont = cont + 1;
+                    }
+                    if ((letras[i] == ("%") && letras[i + 1] == ("%"))) {
+                        cont = cont + 1;
+                    }
+                }
+
+/**
+ * finalmente si valida que tiene dos piesas prohibidas seguidas el sube un contador y por consiguiente
+ * si el contador es mayor a 1 el impeime qu esta mal construido.
+ */
+                if (cont > 0) {
+                    document.write("<br/>" + "La viga esta mal construida");
+                } else {
+                    document.write("La viga soporta el peso");
+                }
+                var peso = lar + con;
+                document.write("el peso es:" + peso);
+            } else {
+                document.write("<br/>" + "<La base esta mal" + "<br/>");
+            }
+
+
+
+        </script>
+    </body>
+</html>
